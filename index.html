@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>World Power Plug Guide</title>
-  <meta name="description" content="Learn about power plug types used in different countries, voltage standards, and travel adapter tips." />
+  <meta name="description" content="Learn about power plug and socket types used in different countries, voltage standards, and travel adapter tips." />
   <style>
     :root {
       --bg: #0b1020;
@@ -31,7 +31,7 @@
 
     a { color: var(--accent); }
     .wrap {
-      width: min(1120px, calc(100% - 32px));
+      width: min(1180px, calc(100% - 32px));
       margin: 0 auto;
     }
 
@@ -54,9 +54,7 @@
       backdrop-filter: blur(10px);
     }
 
-    .hero-card {
-      padding: 32px;
-    }
+    .hero-card { padding: 32px; }
 
     .eyebrow {
       display: inline-block;
@@ -69,15 +67,10 @@
       margin-bottom: 12px;
     }
 
-    h1, h2, h3 {
-      line-height: 1.15;
-      margin: 0 0 12px;
-    }
-
+    h1, h2, h3 { line-height: 1.15; margin: 0 0 12px; }
     h1 { font-size: clamp(2.2rem, 4vw, 4.2rem); }
     h2 { font-size: clamp(1.6rem, 2.5vw, 2.4rem); }
-    h3 { font-size: 1.2rem; }
-
+    h3 { font-size: 1.15rem; }
     p { margin: 0 0 14px; color: var(--muted); }
 
     .stats {
@@ -100,14 +93,8 @@
       color: var(--accent-2);
     }
 
-    main {
-      padding: 8px 0 56px;
-    }
-
-    section {
-      padding: 28px;
-      margin: 24px 0;
-    }
+    main { padding: 8px 0 56px; }
+    section { padding: 28px; margin: 24px 0; }
 
     .grid {
       display: grid;
@@ -135,16 +122,12 @@
 
     .plug-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
       gap: 14px;
       margin-top: 18px;
     }
 
-    .plug-link {
-      display: block;
-      text-decoration: none;
-      color: inherit;
-    }
+    .plug-link { display: block; text-decoration: none; color: inherit; }
 
     .plug-tile {
       height: 100%;
@@ -162,25 +145,24 @@
       box-shadow: 0 12px 28px rgba(124, 199, 255, 0.15);
     }
 
-    .plug-mini {
-      height: 90px;
+    .socket-mini,
+    .socket-visual {
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 10px;
       background: var(--card-3);
-      border-radius: 14px;
       border: 1px solid rgba(255,255,255,0.05);
     }
 
-    .plug-tile p,
-    .plug-detail p {
-      margin-bottom: 8px;
+    .socket-mini {
+      height: 108px;
+      border-radius: 14px;
+      margin-bottom: 10px;
     }
 
     .plug-detail-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 16px;
       margin-top: 22px;
     }
@@ -192,49 +174,31 @@
       padding: 20px;
     }
 
-    .plug-visual {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 190px;
+    .socket-visual {
+      min-height: 200px;
       margin: 14px 0 18px;
-      background: var(--card-3);
       border-radius: 18px;
-      border: 1px solid rgba(255,255,255,0.05);
     }
 
-    .plug-svg {
+    .socket-svg {
       width: 170px;
       height: 170px;
     }
 
-    .plug-body {
+    .plate {
       fill: #f8fbff;
       stroke: #d8e4ff;
       stroke-width: 2;
     }
 
-    .plug-face {
-      fill: #edf4ff;
+    .inner-round {
+      fill: #eef4ff;
       stroke: #d8e4ff;
       stroke-width: 2;
     }
 
-    .plug-pin {
-      fill: #86d8ff;
-      stroke: #c7f0ff;
-      stroke-width: 2;
-    }
-
-    .plug-ground {
-      fill: #8ef0c1;
-      stroke: #d5ffeb;
-      stroke-width: 2;
-    }
-
-    .plug-hole {
-      fill: #0e1731;
-      opacity: 0.7;
+    .slot, .hole {
+      fill: #13213f;
     }
 
     .small-label {
@@ -250,9 +214,7 @@
       color: var(--muted);
     }
 
-    .table-wrap {
-      overflow-x: auto;
-    }
+    .table-wrap { overflow-x: auto; }
 
     table {
       width: 100%;
@@ -268,11 +230,7 @@
       vertical-align: top;
     }
 
-    th {
-      color: var(--text);
-      font-size: 0.95rem;
-    }
-
+    th { color: var(--text); font-size: 0.95rem; }
     td { color: var(--muted); }
 
     .note {
@@ -287,13 +245,8 @@
     }
 
     @media (max-width: 820px) {
-      .hero {
-        grid-template-columns: 1fr;
-      }
-
-      header {
-        padding-top: 32px;
-      }
+      .hero { grid-template-columns: 1fr; }
+      header { padding-top: 32px; }
     }
   </style>
 </head>
@@ -303,21 +256,21 @@
       <div class="hero-card">
         <span class="eyebrow">Travel basics made simple</span>
         <h1>World Power Plug Guide</h1>
-        <p>Different countries use different plug shapes, voltages, and frequencies. This guide helps travelers understand what adapter they need and when they also need a voltage converter.</p>
+        <p>Different countries use different plug and socket shapes, voltages, and frequencies. This guide helps travelers understand what adapter they need and what the outlet will actually look like.</p>
         <p><strong>Quick rule:</strong> a plug adapter changes the shape, but a voltage converter changes the electricity level.</p>
       </div>
       <div class="stats">
         <div class="stat">
-          <strong>15</strong>
-          Common plug types are used worldwide, labeled Type A through Type O.
+          <strong>A to O</strong>
+          This version now covers the broader international plug and socket families commonly listed in travel references.
         </div>
         <div class="stat">
-          <strong>100-127V</strong>
-          Common in North America and parts of Japan.
+          <strong>Socket-first visuals</strong>
+          The clickable illustrations now emphasize outlet hole shapes so users can compare them with real walls.
         </div>
         <div class="stat">
-          <strong>220-240V</strong>
-          Common across Europe, Asia, Africa, and Australia.
+          <strong>Travel-focused</strong>
+          Built for quick recognition rather than electrical engineering detail.
         </div>
       </div>
     </div>
@@ -336,125 +289,54 @@
           <p>Many chargers say something like <em>100-240V, 50/60Hz</em>. If so, you usually only need a plug adapter.</p>
         </div>
         <div class="card">
-          <h3>3. Be careful with heat devices</h3>
-          <p>Hair dryers, kettles, curling irons, and some older appliances may need a real voltage converter, not just an adapter.</p>
+          <h3>3. Match the outlet</h3>
+          <p>Use the socket visuals below to compare what you expect to see on the wall.</p>
         </div>
       </div>
     </section>
 
     <section>
-      <h2>Explore plug shapes</h2>
-      <p>Click a plug type to jump to its visual shape and a short explanation.</p>
+      <h2>Explore socket shapes</h2>
+      <p>Click a type to jump to a larger visual. These illustrations are simplified socket faces, tuned to be closer to the reference style you shared.</p>
       <div class="plug-grid">
-        <a class="plug-link" href="#type-ab"><article class="plug-tile"><div class="plug-mini"><svg class="plug-svg" viewBox="0 0 170 170" aria-hidden="true"><rect class="plug-body" x="45" y="34" rx="22" ry="22" width="80" height="96"/><rect class="plug-pin" x="64" y="130" width="10" height="28" rx="4"/><rect class="plug-pin" x="96" y="130" width="10" height="28" rx="4"/><circle class="plug-ground" cx="85" cy="110" r="8"/></svg></div><span class="plug-badge">Type A / B</span><p>Flat blades used in North America and Japan.</p></article></a>
-        <a class="plug-link" href="#type-cef"><article class="plug-tile"><div class="plug-mini"><svg class="plug-svg" viewBox="0 0 170 170" aria-hidden="true"><rect class="plug-body" x="45" y="34" rx="22" ry="22" width="80" height="96"/><rect class="plug-pin" x="60" y="132" width="14" height="24" rx="7"/><rect class="plug-pin" x="96" y="132" width="14" height="24" rx="7"/><circle class="plug-hole" cx="54" cy="84" r="5"/><circle class="plug-hole" cx="116" cy="84" r="5"/></svg></div><span class="plug-badge">Type C / E / F</span><p>Two round-pin family used across much of Europe.</p></article></a>
-        <a class="plug-link" href="#type-g"><article class="plug-tile"><div class="plug-mini"><svg class="plug-svg" viewBox="0 0 170 170" aria-hidden="true"><rect class="plug-body" x="38" y="36" rx="22" ry="22" width="94" height="96"/><rect class="plug-pin" x="56" y="132" width="12" height="28" rx="3"/><rect class="plug-pin" x="102" y="132" width="12" height="28" rx="3"/><rect class="plug-ground" x="79" y="18" width="12" height="34" rx="3"/></svg></div><span class="plug-badge">Type G</span><p>Three rectangular pins, common in the UK and Singapore.</p></article></a>
-        <a class="plug-link" href="#type-i"><article class="plug-tile"><div class="plug-mini"><svg class="plug-svg" viewBox="0 0 170 170" aria-hidden="true"><rect class="plug-body" x="44" y="36" rx="22" ry="22" width="82" height="96"/><rect class="plug-pin" x="55" y="130" width="10" height="30" rx="4" transform="rotate(-28 60 145)"/><rect class="plug-pin" x="105" y="130" width="10" height="30" rx="4" transform="rotate(28 110 145)"/><rect class="plug-ground" x="79" y="130" width="12" height="28" rx="4"/></svg></div><span class="plug-badge">Type I</span><p>Slanted flat pins used in Australia, NZ, and China.</p></article></a>
-        <a class="plug-link" href="#type-dm"><article class="plug-tile"><div class="plug-mini"><svg class="plug-svg" viewBox="0 0 170 170" aria-hidden="true"><rect class="plug-body" x="44" y="36" rx="22" ry="22" width="82" height="96"/><rect class="plug-pin" x="58" y="132" width="14" height="24" rx="7"/><rect class="plug-pin" x="98" y="132" width="14" height="24" rx="7"/><rect class="plug-ground" x="78" y="112" width="14" height="24" rx="7"/></svg></div><span class="plug-badge">Type D / M</span><p>Three round-pin plugs used in India and South Africa.</p></article></a>
-        <a class="plug-link" href="#type-jkln"><article class="plug-tile"><div class="plug-mini"><svg class="plug-svg" viewBox="0 0 170 170" aria-hidden="true"><rect class="plug-body" x="44" y="36" rx="22" ry="22" width="82" height="96"/><rect class="plug-pin" x="58" y="132" width="12" height="24" rx="6"/><rect class="plug-pin" x="100" y="132" width="12" height="24" rx="6"/><rect class="plug-ground" x="79" y="132" width="12" height="24" rx="6"/></svg></div><span class="plug-badge">Type J / K / L / N</span><p>Regional plug families with distinct grounding layouts.</p></article></a>
+        <a class="plug-link" href="#type-a"><article class="plug-tile"><div class="socket-mini"><svg class="socket-svg" viewBox="0 0 170 170"><rect class="plate" x="40" y="34" rx="24" ry="24" width="90" height="102"/><rect class="slot" x="64" y="72" width="10" height="34" rx="5"/><rect class="slot" x="96" y="72" width="10" height="34" rx="5"/></svg></div><span class="plug-badge">Type A</span><p>Two parallel vertical slots.</p></article></a>
+        <a class="plug-link" href="#type-b"><article class="plug-tile"><div class="socket-mini"><svg class="socket-svg" viewBox="0 0 170 170"><rect class="plate" x="40" y="34" rx="24" ry="24" width="90" height="102"/><rect class="slot" x="64" y="82" width="10" height="26" rx="5"/><rect class="slot" x="96" y="82" width="10" height="26" rx="5"/><circle class="hole" cx="85" cy="64" r="8"/></svg></div><span class="plug-badge">Type B</span><p>Type A with a grounding hole above.</p></article></a>
+        <a class="plug-link" href="#type-c"><article class="plug-tile"><div class="socket-mini"><svg class="socket-svg" viewBox="0 0 170 170"><rect class="plate" x="40" y="34" rx="24" ry="24" width="90" height="102"/><circle class="inner-round" cx="85" cy="85" r="34"/><circle class="hole" cx="72" cy="85" r="6"/><circle class="hole" cx="98" cy="85" r="6"/></svg></div><span class="plug-badge">Type C</span><p>Round recess with two round holes.</p></article></a>
+        <a class="plug-link" href="#type-d"><article class="plug-tile"><div class="socket-mini"><svg class="socket-svg" viewBox="0 0 170 170"><rect class="plate" x="40" y="34" rx="24" ry="24" width="90" height="102"/><circle class="hole" cx="85" cy="64" r="7"/><circle class="hole" cx="68" cy="98" r="7"/><circle class="hole" cx="102" cy="98" r="7"/></svg></div><span class="plug-badge">Type D</span><p>Three round holes in a triangle.</p></article></a>
+        <a class="plug-link" href="#type-e"><article class="plug-tile"><div class="socket-mini"><svg class="socket-svg" viewBox="0 0 170 170"><rect class="plate" x="40" y="34" rx="24" ry="24" width="90" height="102"/><circle class="inner-round" cx="85" cy="85" r="34"/><circle class="hole" cx="72" cy="90" r="6"/><circle class="hole" cx="98" cy="90" r="6"/><circle class="hole" cx="85" cy="64" r="7"/></svg></div><span class="plug-badge">Type E</span><p>Round recessed face with top earth pin point.</p></article></a>
+        <a class="plug-link" href="#type-f"><article class="plug-tile"><div class="socket-mini"><svg class="socket-svg" viewBox="0 0 170 170"><rect class="plate" x="40" y="34" rx="24" ry="24" width="90" height="102"/><circle class="inner-round" cx="85" cy="85" r="34"/><circle class="hole" cx="72" cy="85" r="6"/><circle class="hole" cx="98" cy="85" r="6"/><rect class="slot" x="48" y="80" width="8" height="12" rx="4"/><rect class="slot" x="114" y="80" width="8" height="12" rx="4"/></svg></div><span class="plug-badge">Type F</span><p>Round recess with side grounding clips.</p></article></a>
+        <a class="plug-link" href="#type-g"><article class="plug-tile"><div class="socket-mini"><svg class="socket-svg" viewBox="0 0 170 170"><rect class="plate" x="40" y="34" rx="24" ry="24" width="90" height="102"/><rect class="slot" x="60" y="84" width="10" height="20" rx="4"/><rect class="slot" x="100" y="84" width="10" height="20" rx="4"/><rect class="slot" x="80" y="56" width="10" height="24" rx="4"/></svg></div><span class="plug-badge">Type G</span><p>Three rectangular slots in a triangle.</p></article></a>
+        <a class="plug-link" href="#type-h"><article class="plug-tile"><div class="socket-mini"><svg class="socket-svg" viewBox="0 0 170 170"><rect class="plate" x="40" y="34" rx="24" ry="24" width="90" height="102"/><circle class="inner-round" cx="85" cy="85" r="34"/><circle class="hole" cx="85" cy="62" r="6"/><circle class="hole" cx="72" cy="96" r="6"/><circle class="hole" cx="98" cy="96" r="6"/></svg></div><span class="plug-badge">Type H</span><p>Three round holes in a Y-like layout.</p></article></a>
+        <a class="plug-link" href="#type-i"><article class="plug-tile"><div class="socket-mini"><svg class="socket-svg" viewBox="0 0 170 170"><rect class="plate" x="40" y="34" rx="24" ry="24" width="90" height="102"/><rect class="slot" x="58" y="82" width="10" height="24" rx="4" transform="rotate(-28 63 94)"/><rect class="slot" x="102" y="82" width="10" height="24" rx="4" transform="rotate(28 107 94)"/><rect class="slot" x="80" y="58" width="10" height="24" rx="4"/></svg></div><span class="plug-badge">Type I</span><p>Two angled slots plus vertical earth.</p></article></a>
+        <a class="plug-link" href="#type-j"><article class="plug-tile"><div class="socket-mini"><svg class="socket-svg" viewBox="0 0 170 170"><rect class="plate" x="40" y="34" rx="24" ry="24" width="90" height="102"/><rect class="inner-round" x="52" y="58" rx="24" ry="24" width="66" height="54"/><circle class="hole" cx="70" cy="78" r="6"/><circle class="hole" cx="100" cy="78" r="6"/><circle class="hole" cx="85" cy="98" r="6"/></svg></div><span class="plug-badge">Type J</span><p>Rounded capsule face with three holes.</p></article></a>
+        <a class="plug-link" href="#type-k"><article class="plug-tile"><div class="socket-mini"><svg class="socket-svg" viewBox="0 0 170 170"><rect class="plate" x="40" y="34" rx="24" ry="24" width="90" height="102"/><circle class="inner-round" cx="85" cy="85" r="34"/><circle class="hole" cx="72" cy="90" r="6"/><circle class="hole" cx="98" cy="90" r="6"/><circle class="hole" cx="85" cy="64" r="6"/></svg></div><span class="plug-badge">Type K</span><p>Round recessed face with earth hole.</p></article></a>
+        <a class="plug-link" href="#type-l"><article class="plug-tile"><div class="socket-mini"><svg class="socket-svg" viewBox="0 0 170 170"><rect class="plate" x="52" y="28" rx="18" ry="18" width="66" height="114"/><circle class="hole" cx="85" cy="58" r="6"/><circle class="hole" cx="85" cy="85" r="6"/><circle class="hole" cx="85" cy="112" r="6"/></svg></div><span class="plug-badge">Type L</span><p>Three holes in a straight vertical line.</p></article></a>
+        <a class="plug-link" href="#type-m"><article class="plug-tile"><div class="socket-mini"><svg class="socket-svg" viewBox="0 0 170 170"><rect class="plate" x="40" y="34" rx="24" ry="24" width="90" height="102"/><circle class="hole" cx="85" cy="62" r="8"/><circle class="hole" cx="68" cy="98" r="8"/><circle class="hole" cx="102" cy="98" r="8"/></svg></div><span class="plug-badge">Type M</span><p>Larger round-pin triangular layout.</p></article></a>
+        <a class="plug-link" href="#type-n"><article class="plug-tile"><div class="socket-mini"><svg class="socket-svg" viewBox="0 0 170 170"><rect class="plate" x="40" y="34" rx="24" ry="24" width="90" height="102"/><rect class="inner-round" x="50" y="60" rx="22" ry="22" width="70" height="48"/><circle class="hole" cx="70" cy="82" r="6"/><circle class="hole" cx="100" cy="82" r="6"/><circle class="hole" cx="85" cy="98" r="6"/></svg></div><span class="plug-badge">Type N</span><p>Compact rounded socket with three-hole cluster.</p></article></a>
+        <a class="plug-link" href="#type-o"><article class="plug-tile"><div class="socket-mini"><svg class="socket-svg" viewBox="0 0 170 170"><rect class="plate" x="40" y="34" rx="24" ry="24" width="90" height="102"/><circle class="hole" cx="85" cy="64" r="7"/><circle class="hole" cx="70" cy="96" r="7"/><circle class="hole" cx="100" cy="96" r="7"/></svg></div><span class="plug-badge">Type O</span><p>Three-hole triangle used in Thailand.</p></article></a>
       </div>
     </section>
 
     <section>
-      <h2>Plug shape details</h2>
+      <h2>Socket shape details</h2>
       <div class="plug-detail-grid">
-        <article class="plug-detail" id="type-ab">
-          <span class="plug-badge">Type A / B</span>
-          <div class="plug-visual">
-            <svg class="plug-svg" viewBox="0 0 170 170" role="img" aria-label="Type A and B plug illustration">
-              <rect class="plug-body" x="38" y="30" rx="24" ry="24" width="94" height="106"/>
-              <rect class="plug-face" x="54" y="48" rx="14" ry="14" width="62" height="54"/>
-              <rect class="plug-pin" x="63" y="136" width="11" height="28" rx="4"/>
-              <rect class="plug-pin" x="96" y="136" width="11" height="28" rx="4"/>
-              <circle class="plug-ground" cx="85" cy="116" r="9"/>
-            </svg>
-          </div>
-          <p><strong>Shape:</strong> two flat parallel blades, with Type B adding a round grounding pin.</p>
-          <p><strong>Where used:</strong> United States, Canada, Mexico, and parts of Japan.</p>
-          <span class="small-label">Clicking here helps users picture the familiar North American plug.</span>
-        </article>
-
-        <article class="plug-detail" id="type-cef">
-          <span class="plug-badge">Type C / E / F</span>
-          <div class="plug-visual">
-            <svg class="plug-svg" viewBox="0 0 170 170" role="img" aria-label="Type C, E, and F plug illustration">
-              <rect class="plug-body" x="38" y="30" rx="24" ry="24" width="94" height="106"/>
-              <rect class="plug-face" x="54" y="48" rx="14" ry="14" width="62" height="54"/>
-              <rect class="plug-pin" x="58" y="138" width="15" height="24" rx="7"/>
-              <rect class="plug-pin" x="97" y="138" width="15" height="24" rx="7"/>
-              <circle class="plug-hole" cx="48" cy="90" r="6"/>
-              <circle class="plug-hole" cx="122" cy="90" r="6"/>
-            </svg>
-          </div>
-          <p><strong>Shape:</strong> two round pins. Type E and F differ mostly in how grounding is handled.</p>
-          <p><strong>Where used:</strong> much of continental Europe.</p>
-          <span class="small-label">Useful for showing that many European plugs look similar, but are not identical.</span>
-        </article>
-
-        <article class="plug-detail" id="type-g">
-          <span class="plug-badge">Type G</span>
-          <div class="plug-visual">
-            <svg class="plug-svg" viewBox="0 0 170 170" role="img" aria-label="Type G plug illustration">
-              <rect class="plug-body" x="34" y="38" rx="24" ry="24" width="102" height="98"/>
-              <rect class="plug-face" x="54" y="56" rx="14" ry="14" width="62" height="48"/>
-              <rect class="plug-pin" x="57" y="136" width="12" height="28" rx="3"/>
-              <rect class="plug-pin" x="101" y="136" width="12" height="28" rx="3"/>
-              <rect class="plug-ground" x="79" y="16" width="12" height="38" rx="3"/>
-            </svg>
-          </div>
-          <p><strong>Shape:</strong> three rectangular pins in a triangular layout.</p>
-          <p><strong>Where used:</strong> United Kingdom, Ireland, Singapore, Malaysia, and more.</p>
-          <span class="small-label">This one is visually distinctive, so the illustration really helps.</span>
-        </article>
-
-        <article class="plug-detail" id="type-i">
-          <span class="plug-badge">Type I</span>
-          <div class="plug-visual">
-            <svg class="plug-svg" viewBox="0 0 170 170" role="img" aria-label="Type I plug illustration">
-              <rect class="plug-body" x="38" y="30" rx="24" ry="24" width="94" height="106"/>
-              <rect class="plug-face" x="54" y="48" rx="14" ry="14" width="62" height="54"/>
-              <rect class="plug-pin" x="57" y="136" width="10" height="30" rx="4" transform="rotate(-28 62 151)"/>
-              <rect class="plug-pin" x="103" y="136" width="10" height="30" rx="4" transform="rotate(28 108 151)"/>
-              <rect class="plug-ground" x="79" y="136" width="12" height="28" rx="4"/>
-            </svg>
-          </div>
-          <p><strong>Shape:</strong> two slanted flat pins, often with a vertical grounding pin.</p>
-          <p><strong>Where used:</strong> Australia, New Zealand, China, and Argentina.</p>
-          <span class="small-label">The angled blades are the key visual cue here.</span>
-        </article>
-
-        <article class="plug-detail" id="type-dm">
-          <span class="plug-badge">Type D / M</span>
-          <div class="plug-visual">
-            <svg class="plug-svg" viewBox="0 0 170 170" role="img" aria-label="Type D and M plug illustration">
-              <rect class="plug-body" x="38" y="30" rx="24" ry="24" width="94" height="106"/>
-              <rect class="plug-face" x="54" y="48" rx="14" ry="14" width="62" height="54"/>
-              <rect class="plug-pin" x="57" y="138" width="15" height="24" rx="7"/>
-              <rect class="plug-pin" x="98" y="138" width="15" height="24" rx="7"/>
-              <rect class="plug-ground" x="77" y="116" width="16" height="24" rx="8"/>
-            </svg>
-          </div>
-          <p><strong>Shape:</strong> three round pins forming a triangle, with larger versions for higher current.</p>
-          <p><strong>Where used:</strong> India, Nepal, South Africa, and some nearby regions.</p>
-          <span class="small-label">Good for showing the difference between round-pin families.</span>
-        </article>
-
-        <article class="plug-detail" id="type-jkln">
-          <span class="plug-badge">Type J / K / L / N</span>
-          <div class="plug-visual">
-            <svg class="plug-svg" viewBox="0 0 170 170" role="img" aria-label="Regional round-pin plug illustration">
-              <rect class="plug-body" x="38" y="30" rx="24" ry="24" width="94" height="106"/>
-              <rect class="plug-face" x="54" y="48" rx="14" ry="14" width="62" height="54"/>
-              <rect class="plug-pin" x="58" y="138" width="13" height="24" rx="6"/>
-              <rect class="plug-pin" x="99" y="138" width="13" height="24" rx="6"/>
-              <rect class="plug-ground" x="79" y="138" width="13" height="24" rx="6"/>
-            </svg>
-          </div>
-          <p><strong>Shape:</strong> regional round-pin variants with different spacing and grounding positions.</p>
-          <p><strong>Where used:</strong> Switzerland, Denmark, Italy, Brazil, and others.</p>
-          <span class="small-label">This section helps users understand that not all three-pin round systems are interchangeable.</span>
-        </article>
+        <article class="plug-detail" id="type-a"><span class="plug-badge">Type A</span><div class="socket-visual"><svg class="socket-svg" viewBox="0 0 170 170"><rect class="plate" x="36" y="28" rx="26" ry="26" width="98" height="112"/><rect class="slot" x="64" y="68" width="10" height="38" rx="5"/><rect class="slot" x="96" y="68" width="10" height="38" rx="5"/></svg></div><p><strong>Shape:</strong> two parallel flat-slot openings.</p><p><strong>Common in:</strong> United States, Canada, Mexico, Japan.</p></article>
+        <article class="plug-detail" id="type-b"><span class="plug-badge">Type B</span><div class="socket-visual"><svg class="socket-svg" viewBox="0 0 170 170"><rect class="plate" x="36" y="28" rx="26" ry="26" width="98" height="112"/><rect class="slot" x="64" y="78" width="10" height="28" rx="5"/><rect class="slot" x="96" y="78" width="10" height="28" rx="5"/><circle class="hole" cx="85" cy="60" r="8"/></svg></div><p><strong>Shape:</strong> Type A plus a round grounding opening above.</p><p><strong>Common in:</strong> United States, Canada, Mexico.</p></article>
+        <article class="plug-detail" id="type-c"><span class="plug-badge">Type C</span><div class="socket-visual"><svg class="socket-svg" viewBox="0 0 170 170"><rect class="plate" x="36" y="28" rx="26" ry="26" width="98" height="112"/><circle class="inner-round" cx="85" cy="84" r="36"/><circle class="hole" cx="72" cy="84" r="6"/><circle class="hole" cx="98" cy="84" r="6"/></svg></div><p><strong>Shape:</strong> round recessed area with two round pin holes.</p><p><strong>Common in:</strong> much of Europe and many small chargers worldwide.</p></article>
+        <article class="plug-detail" id="type-d"><span class="plug-badge">Type D</span><div class="socket-visual"><svg class="socket-svg" viewBox="0 0 170 170"><rect class="plate" x="36" y="28" rx="26" ry="26" width="98" height="112"/><circle class="hole" cx="85" cy="60" r="7"/><circle class="hole" cx="68" cy="98" r="7"/><circle class="hole" cx="102" cy="98" r="7"/></svg></div><p><strong>Shape:</strong> three round holes in a compact triangle.</p><p><strong>Common in:</strong> India, Nepal, Sri Lanka.</p></article>
+        <article class="plug-detail" id="type-e"><span class="plug-badge">Type E</span><div class="socket-visual"><svg class="socket-svg" viewBox="0 0 170 170"><rect class="plate" x="36" y="28" rx="26" ry="26" width="98" height="112"/><circle class="inner-round" cx="85" cy="84" r="36"/><circle class="hole" cx="72" cy="90" r="6"/><circle class="hole" cx="98" cy="90" r="6"/><circle class="hole" cx="85" cy="60" r="7"/></svg></div><p><strong>Shape:</strong> Type C-like round recess with a central earth pin position above.</p><p><strong>Common in:</strong> France, Belgium, Poland, Czechia.</p></article>
+        <article class="plug-detail" id="type-f"><span class="plug-badge">Type F</span><div class="socket-visual"><svg class="socket-svg" viewBox="0 0 170 170"><rect class="plate" x="36" y="28" rx="26" ry="26" width="98" height="112"/><circle class="inner-round" cx="85" cy="84" r="36"/><circle class="hole" cx="72" cy="84" r="6"/><circle class="hole" cx="98" cy="84" r="6"/><rect class="slot" x="46" y="78" width="9" height="14" rx="4"/><rect class="slot" x="115" y="78" width="9" height="14" rx="4"/></svg></div><p><strong>Shape:</strong> round recess with side grounding contacts.</p><p><strong>Common in:</strong> Germany, Spain, Netherlands, much of Europe.</p></article>
+        <article class="plug-detail" id="type-g"><span class="plug-badge">Type G</span><div class="socket-visual"><svg class="socket-svg" viewBox="0 0 170 170"><rect class="plate" x="36" y="28" rx="26" ry="26" width="98" height="112"/><rect class="slot" x="60" y="82" width="10" height="22" rx="4"/><rect class="slot" x="100" y="82" width="10" height="22" rx="4"/><rect class="slot" x="80" y="54" width="10" height="24" rx="4"/></svg></div><p><strong>Shape:</strong> three rectangular slots, one above two below.</p><p><strong>Common in:</strong> United Kingdom, Ireland, Singapore, Malaysia.</p></article>
+        <article class="plug-detail" id="type-h"><span class="plug-badge">Type H</span><div class="socket-visual"><svg class="socket-svg" viewBox="0 0 170 170"><rect class="plate" x="36" y="28" rx="26" ry="26" width="98" height="112"/><circle class="inner-round" cx="85" cy="84" r="36"/><circle class="hole" cx="85" cy="58" r="6"/><circle class="hole" cx="72" cy="96" r="6"/><circle class="hole" cx="98" cy="96" r="6"/></svg></div><p><strong>Shape:</strong> three-hole Y pattern within a round area.</p><p><strong>Common in:</strong> Israel and Palestinian territories.</p></article>
+        <article class="plug-detail" id="type-i"><span class="plug-badge">Type I</span><div class="socket-visual"><svg class="socket-svg" viewBox="0 0 170 170"><rect class="plate" x="36" y="28" rx="26" ry="26" width="98" height="112"/><rect class="slot" x="58" y="80" width="10" height="26" rx="4" transform="rotate(-28 63 93)"/><rect class="slot" x="102" y="80" width="10" height="26" rx="4" transform="rotate(28 107 93)"/><rect class="slot" x="80" y="56" width="10" height="24" rx="4"/></svg></div><p><strong>Shape:</strong> two angled flat slots with a vertical earth slot.</p><p><strong>Common in:</strong> Australia, New Zealand, China, Argentina.</p></article>
+        <article class="plug-detail" id="type-j"><span class="plug-badge">Type J</span><div class="socket-visual"><svg class="socket-svg" viewBox="0 0 170 170"><rect class="plate" x="36" y="28" rx="26" ry="26" width="98" height="112"/><rect class="inner-round" x="50" y="56" rx="24" ry="24" width="70" height="56"/><circle class="hole" cx="70" cy="78" r="6"/><circle class="hole" cx="100" cy="78" r="6"/><circle class="hole" cx="85" cy="98" r="6"/></svg></div><p><strong>Shape:</strong> compact rounded face with offset earth hole.</p><p><strong>Common in:</strong> Switzerland and Liechtenstein.</p></article>
+        <article class="plug-detail" id="type-k"><span class="plug-badge">Type K</span><div class="socket-visual"><svg class="socket-svg" viewBox="0 0 170 170"><rect class="plate" x="36" y="28" rx="26" ry="26" width="98" height="112"/><circle class="inner-round" cx="85" cy="84" r="36"/><circle class="hole" cx="72" cy="90" r="6"/><circle class="hole" cx="98" cy="90" r="6"/><circle class="hole" cx="85" cy="60" r="6"/></svg></div><p><strong>Shape:</strong> rounded face with two lower holes and one upper earth hole.</p><p><strong>Common in:</strong> Denmark and Greenland.</p></article>
+        <article class="plug-detail" id="type-l"><span class="plug-badge">Type L</span><div class="socket-visual"><svg class="socket-svg" viewBox="0 0 170 170"><rect class="plate" x="50" y="24" rx="18" ry="18" width="70" height="122"/><circle class="hole" cx="85" cy="56" r="6"/><circle class="hole" cx="85" cy="85" r="6"/><circle class="hole" cx="85" cy="114" r="6"/></svg></div><p><strong>Shape:</strong> three holes stacked in a straight vertical line.</p><p><strong>Common in:</strong> Italy, San Marino, Vatican City.</p></article>
+        <article class="plug-detail" id="type-m"><span class="plug-badge">Type M</span><div class="socket-visual"><svg class="socket-svg" viewBox="0 0 170 170"><rect class="plate" x="36" y="28" rx="26" ry="26" width="98" height="112"/><circle class="hole" cx="85" cy="58" r="8"/><circle class="hole" cx="68" cy="98" r="8"/><circle class="hole" cx="102" cy="98" r="8"/></svg></div><p><strong>Shape:</strong> larger triangular round-hole layout than Type D.</p><p><strong>Common in:</strong> South Africa and some high-current contexts.</p></article>
+        <article class="plug-detail" id="type-n"><span class="plug-badge">Type N</span><div class="socket-visual"><svg class="socket-svg" viewBox="0 0 170 170"><rect class="plate" x="36" y="28" rx="26" ry="26" width="98" height="112"/><rect class="inner-round" x="48" y="58" rx="22" ry="22" width="74" height="52"/><circle class="hole" cx="70" cy="82" r="6"/><circle class="hole" cx="100" cy="82" r="6"/><circle class="hole" cx="85" cy="98" r="6"/></svg></div><p><strong>Shape:</strong> compact rounded three-hole cluster.</p><p><strong>Common in:</strong> Brazil and South Africa (newer standard variants).</p></article>
+        <article class="plug-detail" id="type-o"><span class="plug-badge">Type O</span><div class="socket-visual"><svg class="socket-svg" viewBox="0 0 170 170"><rect class="plate" x="36" y="28" rx="26" ry="26" width="98" height="112"/><circle class="hole" cx="85" cy="60" r="7"/><circle class="hole" cx="70" cy="96" r="7"/><circle class="hole" cx="100" cy="96" r="7"/></svg></div><p><strong>Shape:</strong> three round holes in a neat triangular layout.</p><p><strong>Common in:</strong> Thailand.</p></article>
       </div>
+      <p class="note">These visuals are simplified educational approximations, designed to help recognition. Real outlet plates can vary by manufacturer and wall hardware style.</p>
     </section>
 
     <section>
@@ -478,12 +360,16 @@
             <tr><td>Singapore</td><td>G</td><td>230V</td><td>50Hz</td><td>Same plug family as the UK</td></tr>
             <tr><td>Germany</td><td>C, F</td><td>230V</td><td>50Hz</td><td>Schuko style is common</td></tr>
             <tr><td>France</td><td>C, E</td><td>230V</td><td>50Hz</td><td>Grounding design differs from Type F</td></tr>
-            <tr><td>Italy</td><td>C, F, L</td><td>230V</td><td>50Hz</td><td>Type L is still important in some sockets</td></tr>
+            <tr><td>Switzerland</td><td>C, J</td><td>230V</td><td>50Hz</td><td>Type J is compact and distinctive</td></tr>
+            <tr><td>Italy</td><td>C, F, L</td><td>230V</td><td>50Hz</td><td>Type L remains important</td></tr>
             <tr><td>Australia</td><td>I</td><td>230V</td><td>50Hz</td><td>Same family as New Zealand</td></tr>
             <tr><td>China</td><td>A, C, I</td><td>220V</td><td>50Hz</td><td>Socket shapes can vary by building</td></tr>
             <tr><td>India</td><td>C, D, M</td><td>230V</td><td>50Hz</td><td>Type D is especially common</td></tr>
             <tr><td>Brazil</td><td>C, N</td><td>127V / 220V</td><td>60Hz</td><td>Voltage can vary by city or state</td></tr>
+            <tr><td>Denmark</td><td>C, K</td><td>230V</td><td>50Hz</td><td>Type K has its own grounding layout</td></tr>
+            <tr><td>Thailand</td><td>A, B, C, O</td><td>230V</td><td>50Hz</td><td>Mixed compatibility exists, verify device voltage</td></tr>
             <tr><td>South Africa</td><td>C, D, M, N</td><td>230V</td><td>50Hz</td><td>Mixed socket landscape</td></tr>
+            <tr><td>Israel</td><td>C, H</td><td>230V</td><td>50Hz</td><td>Type H is the local standard</td></tr>
           </tbody>
         </table>
       </div>
@@ -521,7 +407,7 @@
     </section>
 
     <footer>
-      <p><strong>World Power Plug Guide</strong> was created as a simple educational resource for travelers, students, and curious readers. Always verify unusual regional combinations before using expensive equipment.</p>
+      <p><strong>World Power Plug Guide</strong> is a simple educational resource for travelers, students, and curious readers. For unusual regional combinations or expensive equipment, verify official local standards before use.</p>
     </footer>
   </main>
 </body>
