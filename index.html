@@ -10,6 +10,7 @@
       --bg: #0b1020;
       --card: #151c33;
       --card-2: #1d2747;
+      --card-3: #0f1730;
       --text: #eef2ff;
       --muted: #b9c2e3;
       --accent: #7cc7ff;
@@ -19,6 +20,7 @@
     }
 
     * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -131,6 +133,117 @@
       letter-spacing: 0.02em;
     }
 
+    .plug-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .plug-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .plug-tile {
+      height: 100%;
+      background: var(--card-2);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 18px;
+      padding: 16px;
+      transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .plug-link:hover .plug-tile,
+    .plug-link:focus .plug-tile {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+      box-shadow: 0 12px 28px rgba(124, 199, 255, 0.15);
+    }
+
+    .plug-mini {
+      height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+      background: var(--card-3);
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .plug-tile p,
+    .plug-detail p {
+      margin-bottom: 8px;
+    }
+
+    .plug-detail-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 22px;
+    }
+
+    .plug-detail {
+      background: var(--card-2);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 20px;
+      padding: 20px;
+    }
+
+    .plug-visual {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 190px;
+      margin: 14px 0 18px;
+      background: var(--card-3);
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .plug-svg {
+      width: 170px;
+      height: 170px;
+    }
+
+    .plug-body {
+      fill: #f8fbff;
+      stroke: #d8e4ff;
+      stroke-width: 2;
+    }
+
+    .plug-face {
+      fill: #edf4ff;
+      stroke: #d8e4ff;
+      stroke-width: 2;
+    }
+
+    .plug-pin {
+      fill: #86d8ff;
+      stroke: #c7f0ff;
+      stroke-width: 2;
+    }
+
+    .plug-ground {
+      fill: #8ef0c1;
+      stroke: #d5ffeb;
+      stroke-width: 2;
+    }
+
+    .plug-hole {
+      fill: #0e1731;
+      opacity: 0.7;
+    }
+
+    .small-label {
+      display: inline-block;
+      margin-top: 4px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
     ul {
       margin: 0;
       padding-left: 18px;
@@ -230,61 +343,116 @@
     </section>
 
     <section>
-      <h2>Common plug types</h2>
-      <div class="grid">
-        <article class="card">
+      <h2>Explore plug shapes</h2>
+      <p>Click a plug type to jump to its visual shape and a short explanation.</p>
+      <div class="plug-grid">
+        <a class="plug-link" href="#type-ab"><article class="plug-tile"><div class="plug-mini"><svg class="plug-svg" viewBox="0 0 170 170" aria-hidden="true"><rect class="plug-body" x="45" y="34" rx="22" ry="22" width="80" height="96"/><rect class="plug-pin" x="64" y="130" width="10" height="28" rx="4"/><rect class="plug-pin" x="96" y="130" width="10" height="28" rx="4"/><circle class="plug-ground" cx="85" cy="110" r="8"/></svg></div><span class="plug-badge">Type A / B</span><p>Flat blades used in North America and Japan.</p></article></a>
+        <a class="plug-link" href="#type-cef"><article class="plug-tile"><div class="plug-mini"><svg class="plug-svg" viewBox="0 0 170 170" aria-hidden="true"><rect class="plug-body" x="45" y="34" rx="22" ry="22" width="80" height="96"/><rect class="plug-pin" x="60" y="132" width="14" height="24" rx="7"/><rect class="plug-pin" x="96" y="132" width="14" height="24" rx="7"/><circle class="plug-hole" cx="54" cy="84" r="5"/><circle class="plug-hole" cx="116" cy="84" r="5"/></svg></div><span class="plug-badge">Type C / E / F</span><p>Two round-pin family used across much of Europe.</p></article></a>
+        <a class="plug-link" href="#type-g"><article class="plug-tile"><div class="plug-mini"><svg class="plug-svg" viewBox="0 0 170 170" aria-hidden="true"><rect class="plug-body" x="38" y="36" rx="22" ry="22" width="94" height="96"/><rect class="plug-pin" x="56" y="132" width="12" height="28" rx="3"/><rect class="plug-pin" x="102" y="132" width="12" height="28" rx="3"/><rect class="plug-ground" x="79" y="18" width="12" height="34" rx="3"/></svg></div><span class="plug-badge">Type G</span><p>Three rectangular pins, common in the UK and Singapore.</p></article></a>
+        <a class="plug-link" href="#type-i"><article class="plug-tile"><div class="plug-mini"><svg class="plug-svg" viewBox="0 0 170 170" aria-hidden="true"><rect class="plug-body" x="44" y="36" rx="22" ry="22" width="82" height="96"/><rect class="plug-pin" x="55" y="130" width="10" height="30" rx="4" transform="rotate(-28 60 145)"/><rect class="plug-pin" x="105" y="130" width="10" height="30" rx="4" transform="rotate(28 110 145)"/><rect class="plug-ground" x="79" y="130" width="12" height="28" rx="4"/></svg></div><span class="plug-badge">Type I</span><p>Slanted flat pins used in Australia, NZ, and China.</p></article></a>
+        <a class="plug-link" href="#type-dm"><article class="plug-tile"><div class="plug-mini"><svg class="plug-svg" viewBox="0 0 170 170" aria-hidden="true"><rect class="plug-body" x="44" y="36" rx="22" ry="22" width="82" height="96"/><rect class="plug-pin" x="58" y="132" width="14" height="24" rx="7"/><rect class="plug-pin" x="98" y="132" width="14" height="24" rx="7"/><rect class="plug-ground" x="78" y="112" width="14" height="24" rx="7"/></svg></div><span class="plug-badge">Type D / M</span><p>Three round-pin plugs used in India and South Africa.</p></article></a>
+        <a class="plug-link" href="#type-jkln"><article class="plug-tile"><div class="plug-mini"><svg class="plug-svg" viewBox="0 0 170 170" aria-hidden="true"><rect class="plug-body" x="44" y="36" rx="22" ry="22" width="82" height="96"/><rect class="plug-pin" x="58" y="132" width="12" height="24" rx="6"/><rect class="plug-pin" x="100" y="132" width="12" height="24" rx="6"/><rect class="plug-ground" x="79" y="132" width="12" height="24" rx="6"/></svg></div><span class="plug-badge">Type J / K / L / N</span><p>Regional plug families with distinct grounding layouts.</p></article></a>
+      </div>
+    </section>
+
+    <section>
+      <h2>Plug shape details</h2>
+      <div class="plug-detail-grid">
+        <article class="plug-detail" id="type-ab">
           <span class="plug-badge">Type A / B</span>
-          <p>Used mainly in the United States, Canada, Mexico, and parts of Japan.</p>
-          <ul>
-            <li>Flat parallel pins</li>
-            <li>Typically 100-127V</li>
-            <li>Type B includes a grounding pin</li>
-          </ul>
+          <div class="plug-visual">
+            <svg class="plug-svg" viewBox="0 0 170 170" role="img" aria-label="Type A and B plug illustration">
+              <rect class="plug-body" x="38" y="30" rx="24" ry="24" width="94" height="106"/>
+              <rect class="plug-face" x="54" y="48" rx="14" ry="14" width="62" height="54"/>
+              <rect class="plug-pin" x="63" y="136" width="11" height="28" rx="4"/>
+              <rect class="plug-pin" x="96" y="136" width="11" height="28" rx="4"/>
+              <circle class="plug-ground" cx="85" cy="116" r="9"/>
+            </svg>
+          </div>
+          <p><strong>Shape:</strong> two flat parallel blades, with Type B adding a round grounding pin.</p>
+          <p><strong>Where used:</strong> United States, Canada, Mexico, and parts of Japan.</p>
+          <span class="small-label">Clicking here helps users picture the familiar North American plug.</span>
         </article>
-        <article class="card">
+
+        <article class="plug-detail" id="type-cef">
           <span class="plug-badge">Type C / E / F</span>
-          <p>Common across most of continental Europe.</p>
-          <ul>
-            <li>Round pins</li>
-            <li>Usually 220-240V</li>
-            <li>Often works with many European sockets depending on grounding style</li>
-          </ul>
+          <div class="plug-visual">
+            <svg class="plug-svg" viewBox="0 0 170 170" role="img" aria-label="Type C, E, and F plug illustration">
+              <rect class="plug-body" x="38" y="30" rx="24" ry="24" width="94" height="106"/>
+              <rect class="plug-face" x="54" y="48" rx="14" ry="14" width="62" height="54"/>
+              <rect class="plug-pin" x="58" y="138" width="15" height="24" rx="7"/>
+              <rect class="plug-pin" x="97" y="138" width="15" height="24" rx="7"/>
+              <circle class="plug-hole" cx="48" cy="90" r="6"/>
+              <circle class="plug-hole" cx="122" cy="90" r="6"/>
+            </svg>
+          </div>
+          <p><strong>Shape:</strong> two round pins. Type E and F differ mostly in how grounding is handled.</p>
+          <p><strong>Where used:</strong> much of continental Europe.</p>
+          <span class="small-label">Useful for showing that many European plugs look similar, but are not identical.</span>
         </article>
-        <article class="card">
+
+        <article class="plug-detail" id="type-g">
           <span class="plug-badge">Type G</span>
-          <p>Used in the United Kingdom, Ireland, Singapore, Malaysia, and others.</p>
-          <ul>
-            <li>Three rectangular pins</li>
-            <li>Usually fused plugs</li>
-            <li>Typically 230V</li>
-          </ul>
+          <div class="plug-visual">
+            <svg class="plug-svg" viewBox="0 0 170 170" role="img" aria-label="Type G plug illustration">
+              <rect class="plug-body" x="34" y="38" rx="24" ry="24" width="102" height="98"/>
+              <rect class="plug-face" x="54" y="56" rx="14" ry="14" width="62" height="48"/>
+              <rect class="plug-pin" x="57" y="136" width="12" height="28" rx="3"/>
+              <rect class="plug-pin" x="101" y="136" width="12" height="28" rx="3"/>
+              <rect class="plug-ground" x="79" y="16" width="12" height="38" rx="3"/>
+            </svg>
+          </div>
+          <p><strong>Shape:</strong> three rectangular pins in a triangular layout.</p>
+          <p><strong>Where used:</strong> United Kingdom, Ireland, Singapore, Malaysia, and more.</p>
+          <span class="small-label">This one is visually distinctive, so the illustration really helps.</span>
         </article>
-        <article class="card">
+
+        <article class="plug-detail" id="type-i">
           <span class="plug-badge">Type I</span>
-          <p>Used in Australia, New Zealand, China, and Argentina.</p>
-          <ul>
-            <li>Slanted flat pins</li>
-            <li>Typically 220-240V</li>
-            <li>Grounded versions add a vertical pin</li>
-          </ul>
+          <div class="plug-visual">
+            <svg class="plug-svg" viewBox="0 0 170 170" role="img" aria-label="Type I plug illustration">
+              <rect class="plug-body" x="38" y="30" rx="24" ry="24" width="94" height="106"/>
+              <rect class="plug-face" x="54" y="48" rx="14" ry="14" width="62" height="54"/>
+              <rect class="plug-pin" x="57" y="136" width="10" height="30" rx="4" transform="rotate(-28 62 151)"/>
+              <rect class="plug-pin" x="103" y="136" width="10" height="30" rx="4" transform="rotate(28 108 151)"/>
+              <rect class="plug-ground" x="79" y="136" width="12" height="28" rx="4"/>
+            </svg>
+          </div>
+          <p><strong>Shape:</strong> two slanted flat pins, often with a vertical grounding pin.</p>
+          <p><strong>Where used:</strong> Australia, New Zealand, China, and Argentina.</p>
+          <span class="small-label">The angled blades are the key visual cue here.</span>
         </article>
-        <article class="card">
+
+        <article class="plug-detail" id="type-dm">
           <span class="plug-badge">Type D / M</span>
-          <p>Seen in India, Nepal, South Africa, and some neighboring markets.</p>
-          <ul>
-            <li>Three round pins</li>
-            <li>Layouts differ by current rating</li>
-            <li>Usually 220-240V</li>
-          </ul>
+          <div class="plug-visual">
+            <svg class="plug-svg" viewBox="0 0 170 170" role="img" aria-label="Type D and M plug illustration">
+              <rect class="plug-body" x="38" y="30" rx="24" ry="24" width="94" height="106"/>
+              <rect class="plug-face" x="54" y="48" rx="14" ry="14" width="62" height="54"/>
+              <rect class="plug-pin" x="57" y="138" width="15" height="24" rx="7"/>
+              <rect class="plug-pin" x="98" y="138" width="15" height="24" rx="7"/>
+              <rect class="plug-ground" x="77" y="116" width="16" height="24" rx="8"/>
+            </svg>
+          </div>
+          <p><strong>Shape:</strong> three round pins forming a triangle, with larger versions for higher current.</p>
+          <p><strong>Where used:</strong> India, Nepal, South Africa, and some nearby regions.</p>
+          <span class="small-label">Good for showing the difference between round-pin families.</span>
         </article>
-        <article class="card">
+
+        <article class="plug-detail" id="type-jkln">
           <span class="plug-badge">Type J / K / L / N</span>
-          <p>Regional standards used in countries like Switzerland, Denmark, Italy, and Brazil.</p>
-          <ul>
-            <li>Always confirm the exact destination</li>
-            <li>Shape compatibility can be tricky</li>
-            <li>Voltage is usually 220-240V, with exceptions</li>
-          </ul>
+          <div class="plug-visual">
+            <svg class="plug-svg" viewBox="0 0 170 170" role="img" aria-label="Regional round-pin plug illustration">
+              <rect class="plug-body" x="38" y="30" rx="24" ry="24" width="94" height="106"/>
+              <rect class="plug-face" x="54" y="48" rx="14" ry="14" width="62" height="54"/>
+              <rect class="plug-pin" x="58" y="138" width="13" height="24" rx="6"/>
+              <rect class="plug-pin" x="99" y="138" width="13" height="24" rx="6"/>
+              <rect class="plug-ground" x="79" y="138" width="13" height="24" rx="6"/>
+            </svg>
+          </div>
+          <p><strong>Shape:</strong> regional round-pin variants with different spacing and grounding positions.</p>
+          <p><strong>Where used:</strong> Switzerland, Denmark, Italy, Brazil, and others.</p>
+          <span class="small-label">This section helps users understand that not all three-pin round systems are interchangeable.</span>
         </article>
       </div>
     </section>
