@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>World Power Plug Guide</title>
+  <meta name="description" content="Learn about power plug types used in different countries, voltage standards, and travel adapter tips." />
+  <style>
+    :root {
+      --bg: #0b1020;
+      --card: #151c33;
+      --card-2: #1d2747;
+      --text: #eef2ff;
+      --muted: #b9c2e3;
+      --accent: #7cc7ff;
+      --accent-2: #8ef0c1;
+      --border: #2b3761;
+      --shadow: 0 20px 40px rgba(0,0,0,0.25);
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: linear-gradient(180deg, #09101d 0%, #0b1020 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: var(--accent); }
+    .wrap {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 72px 0 36px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.3fr 0.9fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .hero-card, .stats, section, footer {
+      background: rgba(21, 28, 51, 0.85);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-card {
+      padding: 32px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(124, 199, 255, 0.12);
+      color: var(--accent);
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.15;
+      margin: 0 0 12px;
+    }
+
+    h1 { font-size: clamp(2.2rem, 4vw, 4.2rem); }
+    h2 { font-size: clamp(1.6rem, 2.5vw, 2.4rem); }
+    h3 { font-size: 1.2rem; }
+
+    p { margin: 0 0 14px; color: var(--muted); }
+
+    .stats {
+      padding: 28px;
+      display: grid;
+      gap: 18px;
+      align-content: center;
+    }
+
+    .stat {
+      padding: 16px;
+      border-radius: 18px;
+      background: var(--card-2);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.8rem;
+      color: var(--accent-2);
+    }
+
+    main {
+      padding: 8px 0 56px;
+    }
+
+    section {
+      padding: 28px;
+      margin: 24px 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: var(--card-2);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 18px;
+      padding: 18px;
+    }
+
+    .plug-badge {
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(142, 240, 193, 0.12);
+      color: var(--accent-2);
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 760px;
+      margin-top: 12px;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 14px 12px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      vertical-align: top;
+    }
+
+    th {
+      color: var(--text);
+      font-size: 0.95rem;
+    }
+
+    td { color: var(--muted); }
+
+    .note {
+      border-left: 4px solid var(--accent);
+      padding-left: 14px;
+      margin-top: 16px;
+    }
+
+    footer {
+      padding: 20px 24px;
+      margin: 24px 0 40px;
+    }
+
+    @media (max-width: 820px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        padding-top: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <div class="hero">
+      <div class="hero-card">
+        <span class="eyebrow">Travel basics made simple</span>
+        <h1>World Power Plug Guide</h1>
+        <p>Different countries use different plug shapes, voltages, and frequencies. This guide helps travelers understand what adapter they need and when they also need a voltage converter.</p>
+        <p><strong>Quick rule:</strong> a plug adapter changes the shape, but a voltage converter changes the electricity level.</p>
+      </div>
+      <div class="stats">
+        <div class="stat">
+          <strong>15</strong>
+          Common plug types are used worldwide, labeled Type A through Type O.
+        </div>
+        <div class="stat">
+          <strong>100-127V</strong>
+          Common in North America and parts of Japan.
+        </div>
+        <div class="stat">
+          <strong>220-240V</strong>
+          Common across Europe, Asia, Africa, and Australia.
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section>
+      <h2>How to use this guide</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>1. Check the destination</h3>
+          <p>Look up the country or region to find its plug type and voltage standard.</p>
+        </div>
+        <div class="card">
+          <h3>2. Check your device label</h3>
+          <p>Many chargers say something like <em>100-240V, 50/60Hz</em>. If so, you usually only need a plug adapter.</p>
+        </div>
+        <div class="card">
+          <h3>3. Be careful with heat devices</h3>
+          <p>Hair dryers, kettles, curling irons, and some older appliances may need a real voltage converter, not just an adapter.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Common plug types</h2>
+      <div class="grid">
+        <article class="card">
+          <span class="plug-badge">Type A / B</span>
+          <p>Used mainly in the United States, Canada, Mexico, and parts of Japan.</p>
+          <ul>
+            <li>Flat parallel pins</li>
+            <li>Typically 100-127V</li>
+            <li>Type B includes a grounding pin</li>
+          </ul>
+        </article>
+        <article class="card">
+          <span class="plug-badge">Type C / E / F</span>
+          <p>Common across most of continental Europe.</p>
+          <ul>
+            <li>Round pins</li>
+            <li>Usually 220-240V</li>
+            <li>Often works with many European sockets depending on grounding style</li>
+          </ul>
+        </article>
+        <article class="card">
+          <span class="plug-badge">Type G</span>
+          <p>Used in the United Kingdom, Ireland, Singapore, Malaysia, and others.</p>
+          <ul>
+            <li>Three rectangular pins</li>
+            <li>Usually fused plugs</li>
+            <li>Typically 230V</li>
+          </ul>
+        </article>
+        <article class="card">
+          <span class="plug-badge">Type I</span>
+          <p>Used in Australia, New Zealand, China, and Argentina.</p>
+          <ul>
+            <li>Slanted flat pins</li>
+            <li>Typically 220-240V</li>
+            <li>Grounded versions add a vertical pin</li>
+          </ul>
+        </article>
+        <article class="card">
+          <span class="plug-badge">Type D / M</span>
+          <p>Seen in India, Nepal, South Africa, and some neighboring markets.</p>
+          <ul>
+            <li>Three round pins</li>
+            <li>Layouts differ by current rating</li>
+            <li>Usually 220-240V</li>
+          </ul>
+        </article>
+        <article class="card">
+          <span class="plug-badge">Type J / K / L / N</span>
+          <p>Regional standards used in countries like Switzerland, Denmark, Italy, and Brazil.</p>
+          <ul>
+            <li>Always confirm the exact destination</li>
+            <li>Shape compatibility can be tricky</li>
+            <li>Voltage is usually 220-240V, with exceptions</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Country examples</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Country</th>
+              <th>Plug types</th>
+              <th>Voltage</th>
+              <th>Frequency</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>United States</td><td>A, B</td><td>120V</td><td>60Hz</td><td>Common North American standard</td></tr>
+            <tr><td>Canada</td><td>A, B</td><td>120V</td><td>60Hz</td><td>Same as U.S. for most travelers</td></tr>
+            <tr><td>Japan</td><td>A, B</td><td>100V</td><td>50Hz / 60Hz</td><td>East and west Japan use different frequencies</td></tr>
+            <tr><td>United Kingdom</td><td>G</td><td>230V</td><td>50Hz</td><td>Large fused plug standard</td></tr>
+            <tr><td>Singapore</td><td>G</td><td>230V</td><td>50Hz</td><td>Same plug family as the UK</td></tr>
+            <tr><td>Germany</td><td>C, F</td><td>230V</td><td>50Hz</td><td>Schuko style is common</td></tr>
+            <tr><td>France</td><td>C, E</td><td>230V</td><td>50Hz</td><td>Grounding design differs from Type F</td></tr>
+            <tr><td>Italy</td><td>C, F, L</td><td>230V</td><td>50Hz</td><td>Type L is still important in some sockets</td></tr>
+            <tr><td>Australia</td><td>I</td><td>230V</td><td>50Hz</td><td>Same family as New Zealand</td></tr>
+            <tr><td>China</td><td>A, C, I</td><td>220V</td><td>50Hz</td><td>Socket shapes can vary by building</td></tr>
+            <tr><td>India</td><td>C, D, M</td><td>230V</td><td>50Hz</td><td>Type D is especially common</td></tr>
+            <tr><td>Brazil</td><td>C, N</td><td>127V / 220V</td><td>60Hz</td><td>Voltage can vary by city or state</td></tr>
+            <tr><td>South Africa</td><td>C, D, M, N</td><td>230V</td><td>50Hz</td><td>Mixed socket landscape</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Tip: airports and hotels sometimes have mixed sockets, but never rely on that. Bring the adapter you know you need.</p>
+    </section>
+
+    <section>
+      <h2>Adapter or converter?</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Use an adapter when</h3>
+          <ul>
+            <li>Your device supports dual voltage, usually marked 100-240V</li>
+            <li>You only need the plug to physically fit the wall socket</li>
+            <li>You are charging phones, tablets, laptops, cameras, or USB accessories</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Use a converter when</h3>
+          <ul>
+            <li>Your device only supports one voltage</li>
+            <li>You are using high-power appliances with heating elements or motors</li>
+            <li>The destination voltage is much higher or lower than your appliance rating</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Safest travel setup</h3>
+          <ul>
+            <li>A universal adapter from a reputable brand</li>
+            <li>USB-C charging when possible</li>
+            <li>A quick check of your charger label before you pack</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p><strong>World Power Plug Guide</strong> was created as a simple educational resource for travelers, students, and curious readers. Always verify unusual regional combinations before using expensive equipment.</p>
+    </footer>
+  </main>
+</body>
+</html>
